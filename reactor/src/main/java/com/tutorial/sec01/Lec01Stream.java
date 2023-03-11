@@ -15,8 +15,11 @@ public class Lec01Stream {
         });
 
         System.out.println(intStream);
-        //the stream is lazily initialized, even though the thread is being slept for 2 seconds, only when the terminal operation is called, the stream gets to work.
-        
+        //the stream is lazily initialized,
+        // even though the thread is being slept for 2 seconds,
+        // only when the terminal operation is called, the stream gets to work.
+        //otherwise the toString method is called on the Stream
+
         intStream.forEach(System.out::println);
     }
 }
